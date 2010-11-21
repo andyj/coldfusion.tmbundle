@@ -6,7 +6,7 @@
 		a different cfeclipse dictionary file. -->
 	<property name="dictionary.file" value="Resources/cf9.xml" />
 	<property name="output.name" value="ColdFusion" />
-	<property name="output.bundle" value="${output.name}v1.tmbundle" />
+	<property name="output.bundle" value="${output.name}.tmbundle" />
 	
 	<property name="bundle.uuid" value="1A09BE0B-E81A-4CB7-AF69-AFC845162D1F" />
 	<property name="snytax.uuid" value="97CAD6F7-0807-4EB4-876E-DA9E9C1CEC14" />
