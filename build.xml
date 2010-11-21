@@ -1,12 +1,12 @@
 <project name="ColdFusion Textmate Bundle" default="usage">
 	<!-- The xslt process needs an XSLT 2.0 processor, so I am using Saxon-->
-	<property name="saxon.path" value="/Applications/saxonb9-1-0-8j/saxon9.jar" />
+	<property name="saxon.path" value="/Users/andyjarrett/Documents/lib/saxonhe9-3-0-1j/saxon9.jar"/>
 	
 	<!-- Probably wont need to change this unless you are going to try to use
 		a different cfeclipse dictionary file. -->
 	<property name="dictionary.file" value="Resources/cf9.xml" />
 	<property name="output.name" value="ColdFusion" />
-	<property name="output.bundle" value="${output.name}.tmbundle" />
+	<property name="output.bundle" value="${output.name}v1.tmbundle" />
 	
 	<property name="bundle.uuid" value="1A09BE0B-E81A-4CB7-AF69-AFC845162D1F" />
 	<property name="snytax.uuid" value="97CAD6F7-0807-4EB4-876E-DA9E9C1CEC14" />
@@ -63,7 +63,7 @@ ant -Doutput.name=Railo \
 	</target>
 	
 	<target name="clean">
-		<delete dir="build/${output.bundle}" />
+		<delete dir="/Users/andyjarrett/Desktop/${output.bundle}" />
 	</target>
 	
 	<target name="superclean">
@@ -72,7 +72,7 @@ ant -Doutput.name=Railo \
 	
 	<target name="createSnippets">
 		<java jar="${saxon.path}" fork="true">
-			<arg value="-o:build/${output.bundle}/info.plist" />
+			<arg value="-o:/Users/andyjarrett/Desktop/${output.bundle}/info.plist" />
 			<arg value="${dictionary.file}" />
 			<arg value="${xsl.file}" />
 			<arg value="bundle-uuid=${bundle.uuid}" />
@@ -96,7 +96,7 @@ ant -Doutput.name=Railo \
 	</target>
 	
 	<target name="createBundle">
-		<copy todir="build/${output.bundle}">
+		<copy todir="/Users/andyjarrett/Desktop/${output.bundle}">
 			<fileset dir="${base.bundle}"/>
 			<filterset>
 				<filter token="BUNDLE_NAME" value="${output.name}"/>
