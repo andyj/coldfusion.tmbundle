@@ -63,7 +63,7 @@ ant -Doutput.name=Railo \
 	</target>
 	
 	<target name="clean">
-		<delete dir="/Users/andyjarrett/Desktop/${output.bundle}" />
+		<delete dir="build/${output.bundle}" />
 	</target>
 	
 	<target name="superclean">
@@ -72,7 +72,7 @@ ant -Doutput.name=Railo \
 	
 	<target name="createSnippets">
 		<java jar="${saxon.path}" fork="true">
-			<arg value="-o:/Users/andyjarrett/Desktop/${output.bundle}/info.plist" />
+			<arg value="-o:build/${output.bundle}/info.plist" />
 			<arg value="${dictionary.file}" />
 			<arg value="${xsl.file}" />
 			<arg value="bundle-uuid=${bundle.uuid}" />
@@ -96,7 +96,7 @@ ant -Doutput.name=Railo \
 	</target>
 	
 	<target name="createBundle">
-		<copy todir="/Users/andyjarrett/Desktop/${output.bundle}">
+		<copy todir="build/${output.bundle}">
 			<fileset dir="${base.bundle}"/>
 			<filterset>
 				<filter token="BUNDLE_NAME" value="${output.name}"/>

@@ -17,13 +17,13 @@
 		
 		<key>foldingStartMarker</key>
 		<string>(?x) 
-		(&lt;(?i:head|body|table|thead|tbody|tfoot|tr|div|select|fieldset|style|script |ul|ol|form|dl|cfloop|cfif|cfswitch|cfcomponent|cffunction|cfcase|cfdefault case|cfsavecontent)\b.*?&gt; 
+		(&lt;(?i:head|body|table|thead|tbody|tfoot|tr|div|select|fieldset|style|script|ul|ol|form|dl|cfloop|cfif|cfswitch|cfcomponent|cffunction|cfcase|cfdefaultcase|cfsavecontent|cfscript)\b.*?&gt; 
 		        |&lt;!---(?!.*---\s*&gt;)|function\s*|if 
 		        )</string>
 
 		<key>foldingStopMarker</key>
 		<string>(?x) 
-		(&lt;/(?i:head|body|table|thead|tbody|tfoot|tr|div|select|fieldset|style|scrip t|ul|ol|form|dl|cfloop|cfif|cfswitch|cfcomponent|cffunction|cfcase|cfdefaul tcase|cfsavecontent)&gt; 
+		(&lt;/(?i:head|body|table|thead|tbody|tfoot|tr|div|select|fieldset|style|script|ul|ol|form|dl|cfloop|cfif|cfswitch|cfcomponent|cffunction|cfcase|cfdefaultcase|cfsavecontent|cfscript)&gt; 
 		        |^(?!.*?&lt;!---).*?---\s*&gt;|\} 
 		        )</string>
 		
